@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jan 15, 2024 at 10:10 AM
+-- Generation Time: Jan 15, 2024 at 10:29 AM
 -- Server version: 8.0.30
 -- PHP Version: 8.2.12
 
@@ -86,7 +86,8 @@ CREATE TABLE `products` (
 
 CREATE TABLE `users` (
   `id` int NOT NULL,
-  `full_name` varchar(255) NOT NULL,
+  `first_name` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NOT NULL,
+  `last_name` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NOT NULL,
   `date_of_birth` datetime NOT NULL,
   `mail_adres` varchar(255) NOT NULL,
   `phone_number` varchar(50) NOT NULL,
