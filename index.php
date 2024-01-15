@@ -4,107 +4,97 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="images/Peitsman-Favicon.png">
     <title>Home</title>
 </head>
 <body>
 
-    <nav>
-        <img class="icon-image" src="includes/images/peitsman-licht-geluid.png">
-        <a href="#producten-nav">Producten</a>
-        <a href="#home-nav">Home</a>
-        <a href="#reserveer-nav">Reserveer</a>
-        <a href="#contact-nav">Contact</a>
-        <a href="#log-in-nav">Log in</a>
-        <img class="profile-icon" src="includes/images/icon.png">
-    </nav>
+<nav class="navbar">
+    <img class="icon-image" src="includes/images/Peitsman_logo.png"><a href="#products"><span>Producten</span></a><a href="#home"><span>Home</span></a><a href="#preorder"><span>Reserveer</span></a><a href="#contact"><span>Contact</span></a><a href="#login"><span>Log in</span></a><img class="profile-icon" src="includes/images/icon.png">
+</nav>
 
      <div class="line"></div>
-     
-    <div class="center-container">
 
+    <header>
 
-        <header>
+        <h1>Welkom bij Peitsman</h1>
 
-            <h1>Welkom bij Peitsman</h1>
+            <p>
+                Wij zijn Peitsman, gevestigd in Rotterdam, Utrecht en Zwolle.
+                Wij houden van beeld, licht en geluid en we willen graag laten zien welke fantastische dingen
+                je ermee kunt doen. Wij denken mee en bieden creatieve oplossingen op het gebied van
+                audiovisuele techniek. Voor organisatoren en producenten van (bedrijfs)evenementen
+                maar ook in vaste installaties en theatertours.
+            </p>
 
-                <p>
-                    Wij zijn Peitsman, gevestigd in Rotterdam, Utrecht en Zwolle.
-                    Wij houden van beeld, licht en geluid en we willen graag laten zien welke fantastische dingen
-                    je ermee kunt doen. Wij denken mee en bieden creatieve oplossingen op het gebied van
-                    audiovisuele techniek. Voor organisatoren en producenten van (bedrijfs)evenementen
-                    maar ook in vaste installaties en theatertours.
-                </p>
+    </header>
 
-        </header>
-
-        <main id="producten">
-
-            <h2>Onze producten</h2>
-
-            <div id="cards">
-
-                <div class="card-contents">
-                    <div class="card-contents-img"><img src="Images/bas-versterker.jpg"></div>
-                    <div class="card-contents-txt">
-                        <h3>Versterker</h3>
-                            <div class="rating">
-                                <img src="Images/yellow-star.jpeg">
-                                <img src="Images/yellow-star.jpeg">
-                                <img src="Images/yellow-star.jpeg">
-                                <img src="Images/yellow-star.jpeg">
-                                <img src="Images/grey-star.jpeg">
-                            </div>
-                            <p>Deze versterker werkt goed bij de bas, anders komt er geen geluid uit.</p>
-                            <button>
-                                <a href="#https://www.bax-shop.nl/basgitaarversterker-combo/hartke-hd25-basversterker"
-                                    target="_blank_">Bestellen</a>
-                            </button>
-                    </div>
-                 </div>
-
-                <div class="card-contents">
-                    <div class="card-contents-img"><img src="Images/bass-strings.png"></div>
-                    <div class="card-contents-txt">
-                        <h3>Bas strings</h3>
-                            <div class="rating">
-                                <img src="Images/yellow-star.jpeg">
-                                <img src="Images/yellow-star.jpeg">
-                                <img src="Images/grey-star.jpeg">
-                                <img src="Images/grey-star.jpeg">
-                                <img src="Images/grey-star.jpeg">
-                            </div>
-                            <p>Welke bas kan gebruikt worden zonder strings? Koop nu!</p>
-                            <button>
-                                <a href="#https://www.bax-shop.nl/elektrische-bassnaren/ernie-ball-3834-coated-bass-super-slinky-45-100-snarenset/product-details.html"
-                                    target="_blank_">Bestellen</a>
-                            </button>
-                     </div>
-                </div>
-
-                    <div class="card-contents">
-                        <div class="card-contents-img"><img src="Images/bas-stand.jpg"></div>
-                        <div class="card-contents-txt">
-                            <h3>Bas stand</h3>
-                            <div class="rating">
-                                <img src="Images/yellow-star.jpeg">
-                                <img src="Images/yellow-star.jpeg">
-                                <img src="Images/yellow-star.jpeg">
-                                <img src="Images/grey-star.jpeg">
-                                <img src="Images/grey-star.jpeg">
-                            </div>
-                            <p>Voor als je de bas even weg wilt leggen is dit de ideale oplossing.</p>
-
-                            <button>
-                                <a href="#https://www.bax-shop.nl/gitaar-statief/fender-adjustable-guitar-stand-standaard-voor-elektrische-en-akoestische-bas-gitaar"
-                                    target="_blank_">Bestellen</a>
-                            </button>
-                        </div>
-                    </div>
-
-                </div>
-
-            </main>
     </div>
+
+        <div class="line"></div>
+
+        <div class="center-container">
+
+            <section>
+
+                <main id="producten">
+
+                    <h2>Onze producten</h2>
+
+                    <div id="cards">
+
+                        <div class="card-contents">
+                            <div class="card-contents-img"><img src="includes/images/licht.png"></div>
+                            <div class="card-contents-txt">
+                                <h3>Licht</h3>
+                                    <p>Alles wat je nodig hebt voor een ideale belichting</p>
+                                    <button>
+                                        <a href="Producten">Bestellen</a>
+                                    </button>
+                            </div>
+                        </div>
+
+                        <div class="card-contents">
+                            <div class="card-contents-img"><img src="includes/images/beeld.png"></div>
+                            <div class="card-contents-txt">
+                                <h3>Beeld</h3>
+
+                                    <p>Hier vind je de beste schermen van Nederland </p>
+                                    <button>
+                                        <a href="producten">Bestellen</a>
+                                    </button>
+                            </div>
+                        </div>
+
+                        <div class="card-contents">
+                            <div class="card-contents-img"><img src="includes/images/geluid.png"></div>
+                            <div class="card-contents-txt">
+                                <h3>Geluid</h3>
+
+                                <p>Alle producten die je nodig hebt voor jouw ideale geluid</p>
+
+                                <button>
+                                    <a href="producten">Bestellen</a>
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </main>
+
+            </section>
+
+        </div>
+
+<footer>
+    <div class="belangrijk">
+        <p>&copy; 2024 Peitsman.com | alle rechten voorbehouden</p>
+    </div>
+    <div class="meuk">
+        <p><a href="Cookiebeleid.html">Cookiebeleid</a> | <a href="Algemene_voorwaarden.html">Algemene voorwaarden</a></p>
+    </div>
+</footer>
 
 </body>
 </html>
