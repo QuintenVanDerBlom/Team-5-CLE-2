@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jan 15, 2024 at 09:39 AM
+-- Generation Time: Jan 15, 2024 at 10:10 AM
 -- Server version: 8.0.30
 -- PHP Version: 8.2.12
 
@@ -30,10 +30,42 @@ SET time_zone = "+00:00";
 CREATE TABLE `appointments` (
   `id` int NOT NULL,
   `user_id` int NOT NULL,
+  `user_name` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NOT NULL,
   `date` datetime NOT NULL,
-  `product_category` int NOT NULL,
-  `user_name` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+  `category_id` int NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `categories`
+--
+
+CREATE TABLE `categories` (
+  `id` int NOT NULL,
+  `type_number` int NOT NULL,
+  `name` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+
+--
+-- Dumping data for table `categories`
+--
+
+INSERT INTO `categories` (`id`, `type_number`, `name`) VALUES
+(1, 1, 'lighting'),
+(2, 2, 'audio'),
+(3, 3, 'visuals');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `categoryproduct`
+--
+
+CREATE TABLE `categoryproduct` (
+  `category_id` int NOT NULL,
+  `product_id` int NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 -- --------------------------------------------------------
 
@@ -44,7 +76,7 @@ CREATE TABLE `appointments` (
 CREATE TABLE `products` (
   `id` int NOT NULL,
   `name` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 -- --------------------------------------------------------
 
@@ -59,7 +91,7 @@ CREATE TABLE `users` (
   `mail_adres` varchar(255) NOT NULL,
   `phone_number` varchar(50) NOT NULL,
   `password` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
 -- Indexes for dumped tables
@@ -70,6 +102,18 @@ CREATE TABLE `users` (
 --
 ALTER TABLE `appointments`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `categories`
+--
+ALTER TABLE `categories`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `categoryproduct`
+--
+ALTER TABLE `categoryproduct`
+  ADD PRIMARY KEY (`category_id`);
 
 --
 -- Indexes for table `products`
