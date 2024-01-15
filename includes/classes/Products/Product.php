@@ -7,6 +7,6 @@ class Product
     public string $name;
 
     public function getProducts() {
-        
+
     }
 }
