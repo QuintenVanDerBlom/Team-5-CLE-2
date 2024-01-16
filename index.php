@@ -9,9 +9,10 @@
 </head>
 <body>
 
-<nav class="navbar">
-    <img class="icon-image" src="includes/images/Peitsman_logo.png"><a href="#products"><span>Producten</span></a><a href="#home"><span>Home</span></a><a href="#preorder"><span>Reserveer</span></a><a href="#contact"><span>Contact</span></a><a href="#login"><span>Log in</span></a><img class="profile-icon" src="includes/images/icon.png">
-</nav>
+    <nav class="navbar">
+        <img class="icon-image" src="includes/images/Peitsman_logo.png"><a href="#products"><span>Producten</span></a><a class="current" href="index.php"><span>Home</span></a><a href="#preorder"><span>Reserveer</span></a><a href="contact.php"><span>Contact</span></a><a href="#login"><span>Log in</span></a><img class="profile-icon" src="includes/images/icon.png">
+    </nav>
+
 
      <div class="line"></div>
 
@@ -48,7 +49,7 @@
                             <div class="card-contents-txt">
                                 <h3>Licht</h3>
                                     <p>Alles wat je nodig hebt voor een ideale belichting</p>
-                                    <button>
+                                    <button class="link_button">
                                         <a href="Producten">Bestellen</a>
                                     </button>
                             </div>
@@ -60,7 +61,7 @@
                                 <h3>Beeld</h3>
 
                                     <p>Hier vind je de beste schermen van Nederland </p>
-                                    <button>
+                                    <button class="link_button">
                                         <a href="producten">Bestellen</a>
                                     </button>
                             </div>
@@ -73,7 +74,7 @@
 
                                 <p>Alle producten die je nodig hebt voor jouw ideale geluid</p>
 
-                                <button>
+                                <button class="link_button">
                                     <a href="producten">Bestellen</a>
                                 </button>
                             </div>
