@@ -62,9 +62,14 @@ h4 {
 }
 
 .profile-icon {
-    width: 4rem;
+    width: 3rem;
     position: absolute;
     right: 0;
+}
+
+.current {
+    background-color: #a83f25;
+    color: #ffffff;
 }
 
 .navbar a {
