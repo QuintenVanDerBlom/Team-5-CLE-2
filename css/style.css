@@ -100,6 +100,56 @@ h4 {
     font-family: "IBM Plex mono";
 }
 
+.navbar {
+    overflow: hidden;
+    background-color: #ffffff;
+    font-family: "IBM Plex mono";
+    text-align: center;
+    position: relative;
+}
+
+.icon-image {
+    max-width: 15rem;
+    height: auto;
+    align-self: center;
+    position: absolute;
+    margin: 8.81667px;
+    /*vraag er maar niet eens naar*/
+    left: 0;
+}
+
+.profile-icon {
+    width: 3rem;
+    position: absolute;
+    right: 0;
+}
+
+.current {
+    background-color: #a83f25;
+    color: #ffffff;
+}
+
+.navbar a {
+    display: inline-block;
+    color: #000000;
+    text-align: center;
+    padding: 20px 2vw;
+    text-decoration: none;
+    transform: skewX(-25deg);
+    transition: background-color 0.15s, transform 0.15s;
+}
+
+.navbar a span {
+    display: inline-block;
+    transform: skewX(25deg);
+}
+
+.navbar a:hover,
+.navbar a:active {
+    background-color: #CD4321;
+    color: white;
+}
+
 .center-container {
     max-width: 90%;
     margin: 0 auto;
