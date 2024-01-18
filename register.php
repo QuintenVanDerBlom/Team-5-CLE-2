@@ -9,7 +9,6 @@ if(isset($_POST['submit'])) {
 
     $firstName = $_POST['firstName'];
     $lastName = $_POST['lastName'];
-    $dateOfBirth = $_POST['DoB'];
     $email = $_POST['email'];
     $number = $_POST['number'];
     $password = $_POST['password'];
@@ -19,8 +18,6 @@ if(isset($_POST['submit'])) {
         $errors['firstName'] = $errorMessage;
     }if($lastName === '') {
         $errors['lastName'] = $errorMessage;
-    }if($dateOfBirth === '') {
-        $errors['DoB'] = $errorMessage;
     }if($email === '') {
         $errors['email'] = $errorMessage;
     }if($number === '') {
@@ -34,8 +31,8 @@ if(isset($_POST['submit'])) {
         $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
         // store the new user in the database.
-        $query = "INSERT INTO `users`(`id`, `first_name`, `last_name`, `date_of_birth`, `mail_adres`, `phone_number`, `password`) 
-                  VALUES ('','$firstName','$lastName','$dateOfBirth','$email','$number','$hashedPassword')";
+        $query = "INSERT INTO `users`(`id`, `first_name`, `last_name`, `mail_adres`, `phone_number`, `password`) 
+                  VALUES ('','$firstName','$lastName','$email','$number','$hashedPassword')";
 
         $db->query($query);
     }
@@ -48,12 +45,12 @@ if(isset($_POST['submit'])) {
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Registreren</title>
+    <title>Profiel</title>
 </head>
 <body>
 <section>
 
-    <h2 class="title">Register</h2>
+    <h2 class="title">Mijn profiel</h2>
         <form  action="" method="post">
 
             <!-- First name -->
@@ -76,13 +73,13 @@ if(isset($_POST['submit'])) {
                 </div>
             </section>
 
-            <!-- Date Of Birth -->
-            <section id="DOB-Section">
-                <label for="DOB">Date of Birth</label>
-                <input id="DoB" type="date" name="DoB" value="<?= $DoB ?? ''?>" />
+            <!-- Adres -->
+            <section id="adres-Section">
+                <label for="adres">adres</label>
+                <input id="adres" type="text" name="adres" value="<?= $adres ?? ''?>" />
 
-                <div id="errorDoB">
-                    <p> <?= $errors['DoB'] ?? ''?> </p>
+                <div id="erroradres">
+                    <p> <?= $errors['adres'] ?? ''?> </p>
                 </div>
             </section>
 
