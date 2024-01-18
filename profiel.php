@@ -1,4 +1,8 @@
 <?php
+// if ($_SESSION["loggedin"] == false){
+//     header(location:login.php);
+// }
+
 if(isset($_POST['submit'])) {
     /** @var mysqli $db */
     require_once "includes/database.php";
@@ -59,77 +63,76 @@ if(isset($_POST['submit'])) {
 
      <div class="line"></div>
 
-    <section>
-
+    <section id="formContainer">
         <h2 class="title">Mijn profiel</h2>
-             <form  action="" method="post">
+        <form  action="" method="post">
 
-                <!-- First name -->
-                <section id="firstName-Section">
-                    <label for="firstName">First name</label>
-                    <input id="firstName" type="text" name="firstName" value=" <?= $firstName ?? ''?>" />
+            <!-- First name -->
+            <section class="formItem" id="firstName-Section">
+                <label for="firstName">First name</label>
+                <input class="form-input" id="firstName" type="text" name="firstName" value=" <?= $firstName ?? ''?>" />
 
-                    <div>
-                        <p> <?= $errors['firstName'] ?? ''?> </p>
-                    </div>
-                </section>
-
-                <!-- Last name -->
-                <section id="lastName-Section">
-                    <label for="lastName">Last name</label>
-                    <input id="lastName" type="text" name="lastName" value="<?= $lastName ?? ''?>" />
-
-                    <div id="errorLastName">
-                        <p> <?= $errors['lastName'] ?? ''?> </p>
-                    </div>
-                </section>
-
-            <!-- Adres -->
-            <section id="adres-Section">
-                <label for="adres">adres</label>
-                <input id="adres" type="text" name="adres" value="<?= $adres ?? ''?>" />
-
-                <div id="erroradres">
-                    <p> <?= $errors['adres'] ?? ''?> </p>
+                <div>
+                    <p> <?= $errors['firstName'] ?? ''?> </p>
                 </div>
             </section>
 
-                <!-- Email -->
-                <section id="email-Section">
-                    <label for="email">Email</label>
-                    <input id="email" type="text" name="email" value="<?= $email ?? ''?>" />
+            <!-- Last name -->
+            <section class="formItem" id="lastName-Section">
+                <label for="lastName">Last name</label>
+                <input class="form-input" id="lastName" type="text" name="lastName" value="<?= $lastName ?? ''?>" />
 
-                    <div id="errorEmail">
-                        <p> <?= $errors['email'] ?? ''?> </p>
-                    </div>
-                </section>
+                <div id="errorLastName">
+                    <p> <?= $errors['lastName'] ?? ''?> </p>
+                </div>
+            </section>
 
-                <!-- Number -->
-                <section id="number-Section">
-                    <label class="label" for="number">Number</label>
-                    <input class="input" id="number" type="number" name="number" value="<?= $number ?? ''?>" />
+            <!-- Date Of Birth -->
+            <section class="formItem" id="DOB-Section">
+                <label for="DOB">Date of Birth</label>
+                <input class="form-input" id="DoB" type="date" name="DoB" value="<?= $DoB ?? ''?>" />
 
-                    <div id="errorNumber">
-                        <p class="help is-danger"> <?= $errors['number'] ?? ''?> </p>
-                    </div>
-                </section>
+                <div id="errorDoB">
+                    <p> <?= $errors['DoB'] ?? ''?> </p>
+                </div>
+            </section>
 
-                    <!-- Password -->
-                <section id="password-Section">
-                    <label for="password">Password</label>
-                    <input id="password" type="password" name="password"/>
+            <!-- Email -->
+            <section class="formItem" id="email-Section">
+                <label for="email">Email</label>
+                <input class="form-input" id="email" type="text" name="email" value="<?= $email ?? ''?>" />
 
-                    <div id="errorPassword">
-                        <p> <?= $errors['password'] ?? ''?> </p>
-                    </div>
-                </section>
+                <div id="errorEmail">
+                    <p> <?= $errors['email'] ?? ''?> </p>
+                </div>
+            </section>
 
-                <!-- Submit -->
-                <section id="submit">
-                        <button type="submit" name="submit">Register</button>
-                </section>
+            <!-- Number -->
+            <section class="formItem" id="number-Section">
+                <label class="label" for="number">Number</label>
+                <input class="form-input" id="number" type="number" name="number" value="<?= $number ?? ''?>" />
 
-            </form>
+                <div id="errorNumber">
+                    <p class="help is-danger"> <?= $errors['number'] ?? ''?> </p>
+                </div>
+            </section>
+
+                <!-- Password -->
+            <section class="formItem" id="password-Section">
+                <label for="password">Password</label>
+                <input class="form-input" id="password" type="password" name="password"/>
+
+                <div id="errorPassword">
+                    <p> <?= $errors['password'] ?? ''?> </p>
+                </div>
+            </section>
+
+            <!-- Submit -->
+            <section id="submit">
+                    <button id="submitButton" type="submit" name="submit">Register</button>
+            </section>
+
+        </form>
     </section>
 
 <footer>
