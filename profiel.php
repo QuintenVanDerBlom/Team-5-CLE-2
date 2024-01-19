@@ -1,4 +1,8 @@
 <?php
+// if ($_SESSION["loggedin"] == false){
+//     header(location:login.php);
+// }
+
 if(isset($_POST['submit'])) {
     /** @var mysqli $db */
     require_once "includes/database.php";
@@ -13,6 +17,9 @@ if(isset($_POST['submit'])) {
     $email = $_POST['email'];
     $number = $_POST['number'];
     $password = $_POST['password'];
+    $adres = $_POST['adres'];
+    $postcode = $_POST['postcode'];
+
 
     // Server-side validation
     if($firstName === '') {
@@ -27,6 +34,10 @@ if(isset($_POST['submit'])) {
         $errors['number'] = $errorMessage;
     }if($password === '') {
         $errors['password'] = $errorMessage;
+    }if($adres === '') {
+        $errors['adres'] = $errorMessage;
+    }if($postcode === '') {
+        $errors['postcode'] = $errorMessage;
     }
 
     // create a secure password, with the PHP function password_hash()
@@ -34,8 +45,8 @@ if(isset($_POST['submit'])) {
         $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
         // store the new user in the database.
-        $query = "INSERT INTO `users`(`id`, `first_name`, `last_name`, `date_of_birth`, `mail_adres`, `phone_number`, `password`) 
-                  VALUES ('','$firstName','$lastName','$dateOfBirth','$email','$number','$hashedPassword')";
+        $query = "INSERT INTO `users`(`id`, `first_name`, `last_name`,`date_of_birth`, `mail_adres`, `phone_number`, `password`, `adres`,`postcode`) 
+                  VALUES ('','$firstName','$lastName','$DoB','$email','$number','$hashedPassword','$adres','$postcode')";
 
         $db->query($query);
     }
@@ -59,15 +70,16 @@ if(isset($_POST['submit'])) {
 
      <div class="line"></div>
 
-    <section>
+    <section class="profileFlex">
 
-        <h2 class="title">Mijn profiel</h2>
-             <form  action="" method="post">
+        <section id="formContainer">
+            <h2 class="title">Mijn profiel</h2>
+            <form  action="" method="post">
 
                 <!-- First name -->
-                <section id="firstName-Section">
+                <section class="formItem" id="firstName-Section">
                     <label for="firstName">First name</label>
-                    <input id="firstName" type="text" name="firstName" value=" <?= $firstName ?? ''?>" />
+                    <input class="form-input" id="firstName" type="text" name="firstName" value=" <?= $firstName ?? ''?>" />
 
                     <div>
                         <p> <?= $errors['firstName'] ?? ''?> </p>
@@ -75,29 +87,59 @@ if(isset($_POST['submit'])) {
                 </section>
 
                 <!-- Last name -->
-                <section id="lastName-Section">
+                <section class="formItem" id="lastName-Section">
                     <label for="lastName">Last name</label>
-                    <input id="lastName" type="text" name="lastName" value="<?= $lastName ?? ''?>" />
+                    <input class="form-input" id="lastName" type="text" name="lastName" value="<?= $lastName ?? ''?>" />
 
                     <div id="errorLastName">
                         <p> <?= $errors['lastName'] ?? ''?> </p>
                     </div>
                 </section>
 
-            <!-- Adres -->
-            <section id="adres-Section">
-                <label for="adres">adres</label>
-                <input id="adres" type="text" name="adres" value="<?= $adres ?? ''?>" />
+                <!-- Password -->
+                <section class="formItem" id="password-Section">
+                    <label for="password">Password</label>
+                    <input class="form-input" id="password" type="password" name="password"/>
 
-                <div id="erroradres">
-                    <p> <?= $errors['adres'] ?? ''?> </p>
-                </div>
-            </section>
+                    <div id="errorPassword">
+                        <p> <?= $errors['password'] ?? ''?> </p>
+                    </div>
+                </section>
+
+                <!-- Date Of Birth -->
+                <section class="formItem" id="DOB-Section">
+                    <label for="DOB">Date of Birth</label>
+                    <input class="form-input" id="DoB" type="date" name="DoB" value="<?= $DoB ?? ''?>" />
+
+                    <div id="errorDoB">
+                        <p> <?= $errors['DoB'] ?? ''?> </p>
+                    </div>
+                </section>
+
+                <!-- Adres -->
+                <section class="formItem" id="adres-Section">
+                    <label for="adres">Adres</label>
+                    <input class="form-input" id="adres" type="text" name="adres" value="<?= $adres ?? ''?>" />
+
+                    <div id="errorAdres">
+                        <p> <?= $errors['adres'] ?? ''?> </p>
+                    </div>
+                </section>
+
+                <!-- Postcode -->
+                <section class="formItem" id="postcode-Section">
+                    <label for="postcode">Postcode</label>
+                    <input class="form-input" id="postcode" type="text" name="postcode" value="<?= $postcode ?? ''?>" />
+
+                    <div id="errorPostcode">
+                        <p> <?= $errors['postcode'] ?? ''?> </p>
+                    </div>
+                </section>
 
                 <!-- Email -->
-                <section id="email-Section">
+                <section class="formItem" id="email-Section">
                     <label for="email">Email</label>
-                    <input id="email" type="text" name="email" value="<?= $email ?? ''?>" />
+                    <input class="form-input" id="email" type="text" name="email" value="<?= $email ?? ''?>" />
 
                     <div id="errorEmail">
                         <p> <?= $errors['email'] ?? ''?> </p>
@@ -105,31 +147,30 @@ if(isset($_POST['submit'])) {
                 </section>
 
                 <!-- Number -->
-                <section id="number-Section">
+                <section class="formItem" id="number-Section">
                     <label class="label" for="number">Number</label>
-                    <input class="input" id="number" type="number" name="number" value="<?= $number ?? ''?>" />
+                    <input class="form-input" id="number" type="number" name="number" value="<?= $number ?? ''?>" />
 
                     <div id="errorNumber">
                         <p class="help is-danger"> <?= $errors['number'] ?? ''?> </p>
                     </div>
                 </section>
 
-                    <!-- Password -->
-                <section id="password-Section">
-                    <label for="password">Password</label>
-                    <input id="password" type="password" name="password"/>
-
-                    <div id="errorPassword">
-                        <p> <?= $errors['password'] ?? ''?> </p>
-                    </div>
-                </section>
-
                 <!-- Submit -->
                 <section id="submit">
-                        <button type="submit" name="submit">Register</button>
+                        <button id="submitButton" type="submit" name="submit">Wijzigingen opslaan</button>
                 </section>
 
             </form>
+        </section>
+
+        <section class= "rightSide">
+
+            <img id= profile-icon-big src="includes/images/icon.png">
+
+            <h1>Welkom <?= $firstName?></h1>
+        </section>
+
     </section>
 
 <footer>

@@ -53,6 +53,10 @@ if(isset($_POST['submit'])) {
 </head>
 <body>
 
+    <section>
+        <h1>Welkom <?= $firstName?></h1>
+    <section>
+
     <section id="formContainer">
         <h2 class="title">Register</h2>
         <form  action="" method="post">
@@ -124,5 +128,10 @@ if(isset($_POST['submit'])) {
 
         </form>
     </section>
+
+    <section>
+        <h1>Welkom <?= $firstName?></h1>
+    <section>
+
 </body>
 </html>
