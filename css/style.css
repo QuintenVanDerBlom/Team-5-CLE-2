@@ -1,14 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
-#page-container {
-    /*dit is voor de footer*/
+#page-container { /*dit is voor de footer*/
     position: relative;
-    max-height: 100vh;
-    min-height: 90vh;
+    min-height: 86.45vh;
 }
 
-#content-wrap {
-    /*dit is ook voor de footer*/
+#content-wrap { /*dit is ook voor de footer*/
     padding-bottom: 2.5rem;
 }
 
@@ -16,17 +13,7 @@
     box-sizing: border-box;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-
-
-/* navigatiebalk */
+/* navigatiebar */
 
 .navbar {
     overflow: hidden;
@@ -34,8 +21,6 @@ body {
     font-family: "IBM Plex mono";
     text-align: center;
     position: relative;
-    min-width: 1065px;
-    z-index: 1;
 }
 
 .icon-image {
@@ -43,15 +28,15 @@ body {
     height: auto;
     align-self: center;
     position: absolute;
-    margin: 8.81667px;
+    margin: 8.81667px; /*vraag er maar niet eens naar*/
     left: 0;
 }
 
 .profile-icon {
-    margin: 0.5rem;
     width: 3rem;
     position: absolute;
     right: 0;
+    margin: 0.5rem;
 }
 
 .navbar a {
@@ -76,7 +61,8 @@ body {
 }
 
 .current {
-    background-color: #b14429;
+    background-color: #b93d1e;
+    color: #ffffff;
 }
 
 .line {
@@ -84,9 +70,9 @@ body {
     height: 2px;
 }
 
-
-
-/*algemene dingen*/
+body {
+    margin: 0;
+}
 
 h1 {
     margin: 50px;
@@ -114,6 +100,56 @@ h4 {
     font-family: "IBM Plex mono";
 }
 
+.navbar {
+    overflow: hidden;
+    background-color: #ffffff;
+    font-family: "IBM Plex mono";
+    text-align: center;
+    position: relative;
+}
+
+.icon-image {
+    max-width: 15rem;
+    height: auto;
+    align-self: center;
+    position: absolute;
+    margin: 8.81667px;
+    /*vraag er maar niet eens naar*/
+    left: 0;
+}
+
+.profile-icon {
+    width: 3rem;
+    position: absolute;
+    right: 0;
+}
+
+.current {
+    background-color: #a83f25;
+    color: #ffffff;
+}
+
+.navbar a {
+    display: inline-block;
+    color: #000000;
+    text-align: center;
+    padding: 20px 2vw;
+    text-decoration: none;
+    transform: skewX(-25deg);
+    transition: background-color 0.15s, transform 0.15s;
+}
+
+.navbar a span {
+    display: inline-block;
+    transform: skewX(25deg);
+}
+
+.navbar a:hover,
+.navbar a:active {
+    background-color: #CD4321;
+    color: white;
+}
+
 .center-container {
     max-width: 90%;
     margin: 0 auto;
@@ -133,10 +169,6 @@ header p {
     color: white;
     font-family: Arial, Helvetica, sans-serif;
 }
-
-
-
-/* Homepagina */
 
 #cards {
     display: flex;
@@ -210,8 +242,6 @@ header p {
     transform: scale(1.2);
 }
 
-
-
 /* contactformulier */
 
 .contactforum {
@@ -224,7 +254,7 @@ header p {
 .form_stuff {
     font-family: "IBM Plex mono";
     width: 60vw;
-    max-width: 650px;
+    max-width: 650px; /*Mag je wijzigen als je vindt dat t niet klopt*/
     margin: 0 auto;
     padding: 2vh;
 }
@@ -251,10 +281,6 @@ header p {
     box-sizing: border-box;
     border: 2px solid #3a3a3a;
     border-radius: 1vh;
-}
-
-.invullen input::placeholder {
-    text-align: center;
 }
 
 .invullen.row {
@@ -305,222 +331,6 @@ input:valid {
     transition: 0.15s;
 }
 
-
-
-/* Reserveerpagina */
-/* Er staan dingen dubbel in maar ik heb daar nu geen zin meer in ik fix dat morgen wel */
-
-.body-content {
-    display: flex;
-    flex: 1;
-}
-
-.left-part,
-.right-part {
-    flex: 1;
-    height: 100%;
-    border: 1px solid #ffffff;
-    box-sizing: border-box;
-    z-index: 0;
-}
-
-.left-part {
-    background-color: #ffffff;
-    padding: 1vh 5vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.left-part h2,
-.left-part h3 {
-    padding-left: 20px;
-}
-
-.right-part {
-    background-color: #ffffff;
-    padding: 1vh 5vw;
-}
-
-.left-part h2,
-.right-part h2 {
-    margin-bottom: 1vh;
-}
-
-.left-part h3,
-.right-part h3 {
-    margin-bottom: 0.5vh;
-}
-
-.winkelwagen-container {
-    margin-bottom: 5vh;
-    color: #000000;
-    font-size: clamp(10px, 3vh, 25px);
-    background-color: #ffffff;
-    border: 2px solid #000;
-    border-radius: 1vh;
-    width: 100%;
-    height: 20vh;
-    transition: 0.15s;
-}
-
-.plekbezorging,
-.tijd {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-
-.bestelknop {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100%;
-}
-
-.invullen.column input {
-    margin-top: 0.5vh;
-    color: #000000;
-    font-size: clamp(10px, 3vh, 25px);
-    background-color: #ffffff;
-    border: 2px solid #000;
-    border-radius: 1vh;
-    width: 100%;
-    height: 10vh;
-    max-height: 50px;
-    transition: 0.15s;
-}
-
-.invullen.column input::placeholder {
-    text-align: center;
-}
-
-.invullen.column input[type="time"] {
-    width: 100%;
-    text-align: center;
-}
-
-.invullen.row {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.invullen.row .column {
-    width: 46%;
-    margin-bottom: 10px;
-}
-
-.order_button {
-    align-items: center;
-    margin-top: 2vh;
-    color: #fff;
-    font-size: clamp(10px, 3vh, 25px);
-    background-color: #CD4321;
-    border: 2px solid #000;
-    border-radius: 1vh;
-    width: 90%;
-    height: 10vh;
-    max-height: 50px;
-    transition: 0.15s;
-}
-
-.order_button:hover {
-    transform: scale(1.05);
-    font-size: clamp(15px, 4vh, 30px);
-    background-color: #df5f3f;
-    box-shadow: 0px 0vh 5vh #ffffff;
-    transition: 0.15s;
-}
-
-.meer-reserveren {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-}
-
-.more-products-link {
-    margin-top: 10px;
-    color: #fff;
-    text-decoration: none;
-    font-size: clamp(10px, 3vh, 25px);
-    background-color: #CD4321;
-    border: 2px solid #000;
-    border-radius: 1vh;
-    width: 100%;
-    max-height: 50px;
-    transition: 0.15s;
-}
-
-.bekijk-producten-button:hover {
-    transform: scale(1.05);
-    font-size: clamp(15px, 4vh, 30px);
-    background-color: #df5f3f;
-    box-shadow: 0px 0vh 5vh #ffffff;
-    transition: 0.15s;
-}
-
-.kalender-buttons {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-}
-
-.arrow-button {
-    margin: 10px;
-    color: #000000;
-    font-size: clamp(10px, 3vh, 25px);
-    background-color: transparent;
-    border: none;
-    border-radius: 1vh;
-    width: 10vw;
-    max-width: 80px;
-    height: 10vh;
-    max-height: 50px;
-    transition: 0.15s;
-}
-
-.arrow-button:hover {
-    background-color: rgba(255, 220, 212, 0.5);
-    box-shadow: 0px 0vh 5vh #ffffff;
-    transition: 0.15s;
-}
-
-
-
-
-/* login */
-/* nogmaals veel hergebruikte elementen */
-
-.login_button {
-    margin-top: 2vh;
-    color: #fff;
-    font-size: clamp(10px, 3vh, 25px);
-    background-color: #9ECE62;
-    border: 2px solid #000;
-    border-radius: 1vh;
-    width: 100%;
-    height: 10vh;
-    max-height: 50px;
-    transition: 0.15s;
-}
-
-.login_button:hover {
-    transform: scale(1.05);
-    font-size: clamp(15px, 4vh, 30px);
-    background-color: #abd37a;
-    box-shadow: 0px 0vh 5vh #ffffff;
-    transition: 0.15s;
-}
-
-
-
-
-
 /* footer */
 
 footer {
@@ -532,7 +342,6 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 1;
 }
 
 footer p {
@@ -599,3 +408,4 @@ footer p {
         margin-bottom: 1rem;
     }
 }
+
