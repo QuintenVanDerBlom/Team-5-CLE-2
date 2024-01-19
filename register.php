@@ -12,6 +12,8 @@ if(isset($_POST['submit'])) {
     $dateOfBirth = $_POST['DoB'];
     $email = $_POST['email'];
     $number = $_POST['number'];
+    $adres = $_POST['adres'];
+    $postcode = $_POST['postcode'];
     $password = $_POST['password'];
 
     // Server-side validation
@@ -25,6 +27,10 @@ if(isset($_POST['submit'])) {
         $errors['email'] = $errorMessage;
     }if($number === '') {
         $errors['number'] = $errorMessage;
+    }if($adres === '') {
+        $errors['adres'] = $errorMessage;
+    }if($postcode === '') {
+        $errors['postcode'] = $errorMessage;
     }if($password === '') {
         $errors['password'] = $errorMessage;
     }
@@ -34,10 +40,11 @@ if(isset($_POST['submit'])) {
         $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
         // store the new user in the database.
-        $query = "INSERT INTO `users`(`id`, `first_name`, `last_name`, `date_of_birth`, `mail_adres`, `phone_number`, `password`) 
-                  VALUES ('','$firstName','$lastName','$dateOfBirth','$email','$number','$hashedPassword')";
+        $query = "INSERT INTO `users`(`first_name`, `last_name`, `date_of_birth`, `mail_adres`, `phone_number`, `password`, `adres`, `postcode`) 
+                  VALUES ('$firstName','$lastName','$dateOfBirth','$email','$number','$hashedPassword','$adres','$postcode')";
 
         $db->query($query);
+        header('Location: login.php');
     }
 }
 ?>
@@ -53,42 +60,30 @@ if(isset($_POST['submit'])) {
 </head>
 <body>
 
-    <section>
-        <h1>Welkom <?= $firstName?></h1>
-    <section>
-
     <section id="formContainer">
         <h2 class="title">Register</h2>
         <form  action="" method="post">
 
-            <!-- First name -->
-            <section class="formItem" id="firstName-Section">
-                <label for="firstName">First name</label>
-                <input class="form-input" id="firstName" type="text" name="firstName" value=" <?= $firstName ?? ''?>" />
+            <section class="halfFormContainer">
+                <!-- First name -->
+                <section class="formItem" id="firstName-Section">
+                    <label for="firstName">First name</label>
+                    <input class="form-half-input" id="firstName" type="text" name="firstName" value=" <?= $firstName ?? ''?>" />
 
-                <div>
-                    <p> <?= $errors['firstName'] ?? ''?> </p>
-                </div>
-            </section>
+                    <div>
+                        <p> <?= $errors['firstName'] ?? ''?> </p>
+                    </div>
+                </section>
 
-            <!-- Last name -->
-            <section class="formItem" id="lastName-Section">
-                <label for="lastName">Last name</label>
-                <input class="form-input" id="lastName" type="text" name="lastName" value="<?= $lastName ?? ''?>" />
+                <!-- Last name -->
+                <section class="formItem" id="lastName-Section">
+                    <label for="lastName">Last name</label>
+                    <input class="form-half-input" id="lastName" type="text" name="lastName" value="<?= $lastName ?? ''?>" />
 
-                <div id="errorLastName">
-                    <p> <?= $errors['lastName'] ?? ''?> </p>
-                </div>
-            </section>
-
-            <!-- Date Of Birth -->
-            <section class="formItem" id="DOB-Section">
-                <label for="DOB">Date of Birth</label>
-                <input class="form-input" id="DoB" type="date" name="DoB" value="<?= $DoB ?? ''?>" />
-
-                <div id="errorDoB">
-                    <p> <?= $errors['DoB'] ?? ''?> </p>
-                </div>
+                    <div id="errorLastName">
+                        <p> <?= $errors['lastName'] ?? ''?> </p>
+                    </div>
+                </section>
             </section>
 
             <!-- Email -->
@@ -101,14 +96,48 @@ if(isset($_POST['submit'])) {
                 </div>
             </section>
 
-            <!-- Number -->
-            <section class="formItem" id="number-Section">
-                <label class="label" for="number">Number</label>
-                <input class="form-input" id="number" type="number" name="number" value="<?= $number ?? ''?>" />
+            <section class="halfFormContainer">
+                <!-- Date Of Birth -->
+                <section class="formItem" id="DOB-Section">
+                    <label for="DOB">Date of Birth</label>
+                    <input class="form-half-input" id="DoB" type="date" name="DoB" value="<?= $DoB ?? ''?>" />
 
-                <div id="errorNumber">
-                    <p class="help is-danger"> <?= $errors['number'] ?? ''?> </p>
-                </div>
+                    <div id="errorDoB">
+                        <p> <?= $errors['DoB'] ?? ''?> </p>
+                    </div>
+                </section>
+
+                <!-- Number -->
+                <section class="formItem" id="number-Section">
+                    <label for="number">Number</label>
+                    <input class="form-half-input" id="number" type="number" name="number" value="<?= $number ?? ''?>" />
+
+                    <div id="errorNumber">
+                        <p class="help is-danger"> <?= $errors['number'] ?? ''?> </p>
+                    </div>
+                </section>
+            </section>
+
+            <section class="halfFormContainer">
+                <!-- adres -->
+                <section class="formItem" id="adres-Section">
+                    <label for="adres">Adres</label>
+                    <input class="form-half-input" id="adres" type="text" name="adres" value="<?= $adres ?? ''?>" />
+
+                    <div id="errorAdres">
+                        <p> <?= $errors['adres'] ?? ''?> </p>
+                    </div>
+                </section>
+
+                <!-- postcode -->
+                <section class="formItem" id="postcode-Section">
+                    <label for="postcode">Postcode</label>
+                    <input class="form-half-input" id="postcode" type="text" name="postcode" value="<?= $postcode ?? ''?>" />
+
+                    <div id="errorPostcode">
+                        <p class="help is-danger"> <?= $errors['postcode'] ?? ''?> </p>
+                    </div>
+                </section>
             </section>
 
                 <!-- Password -->
@@ -128,10 +157,5 @@ if(isset($_POST['submit'])) {
 
         </form>
     </section>
-
-    <section>
-        <h1>Welkom <?= $firstName?></h1>
-    <section>
-
 </body>
 </html>

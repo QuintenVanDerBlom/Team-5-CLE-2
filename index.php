@@ -1,3 +1,12 @@
+<?php
+    if (session_status() !== PHP_SESSION_ACTIVE) {
+        session_start();
+        $_SESSION['loggedin'] = false;
+    } else {
+        $loggedin = $_SESSION['loggedin'];
+    }
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,14 +14,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/x-icon" href="images/Peitsman-Favicon.png">
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <title>Home</title>
 </head>
 <body>
 
+    <?php if ($loggedin){?>
     <nav class="navbar">
-    <img class="icon-image" src="includes/images/Peitsman_logo.png"><a href="#products"><span>Producten</span></a><a class="current" href="index.php"><span>Home</span></a><a href="preorder.php"><span>Reserveer</span></a><a href="contact.php"><span>Contact</span></a><a href="login.php"><span>Log in</span></a><img class="profile-icon" src="includes/images/icon.png">
+        <img class="icon-image" src="includes/images/Peitsman_logo.png">
+        <a href="#products"><span>Producten</span></a>
+        <a class="current" href="index.php"><span>Home</span></a>
+        <a href="#preorder"><span>Reserveer</span></a>
+        <a href="contact.php"><span>Contact</span></a>
+        <img class="profile-icon" src="includes/images/icon.png">
     </nav>
+    <?php } else { ?>
+        <nav class="navbar">
+            <img class="icon-image" src="includes/images/Peitsman_logo.png">
+            <a href="#products"><span>Producten</span></a>
+            <a class="current" href="index.php"><span>Home</span></a>
+            <a href="#preorder"><span>Reserveer</span></a>
+            <a href="contact.php"><span>Contact</span></a>
+            <a href="login.php"><span>Log in</span></a>
+            <img class="profile-icon" src="includes/images/icon.png">
+        </nav>
+    <?php }  ?>
 
 
      <div class="line"></div>
@@ -97,8 +122,6 @@
         <p><a href="Cookiebeleid.html">Cookiebeleid</a> | <a href="Algemene_voorwaarden.html">Algemene voorwaarden</a></p>
     </div>
 </footer>
-
-<script src="bootstrap/js/bootstrap.min.js"></script>
 
 </body>
 </html>
