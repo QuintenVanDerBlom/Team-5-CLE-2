@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7d4a070a-5daa-476d-b223-e137a657357e" name="Changes" comment="" />
+    <list default="true" id="7d4a070a-5daa-476d-b223-e137a657357e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b39e10cc-3ab4-4a3e-a099-f4ca985ac9e4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b39e10cc-3ab4-4a3e-a099-f4ca985ac9e4.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profiel.php" beforeDir="false" afterPath="$PROJECT_DIR$/profiel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/register.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,9 +27,9 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="Z:\laragon\bin\php\php-8.1.10-Win32-vs16-x64\php.exe" />
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2az90hotYpn2j8Na9SXopX8pucN" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -38,7 +45,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "Z:/Programming/eindopdracht-php",
+    "last_opened_file_path": "C:/xampp/htdocs/Team-5-CLE-2",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -60,6 +67,8 @@
       <option name="presentableId" value="Default" />
       <updated>1705310318297</updated>
       <workItem from="1705310319304" duration="8946000" />
+      <workItem from="1705656594409" duration="11000" />
+      <workItem from="1705658106336" duration="1423000" />
     </task>
     <servers />
   </component>

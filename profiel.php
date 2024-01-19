@@ -46,7 +46,7 @@ if(isset($_POST['submit'])) {
 
         // store the new user in the database.
         $query = "INSERT INTO `users`(`id`, `first_name`, `last_name`,`date_of_birth`, `mail_adres`, `phone_number`, `password`, `adres`,`postcode`) 
-                  VALUES ('','$firstName','$lastName','$DoB','$email','$number','$hashedPassword','$adres','$postcode')";
+                  VALUES ('','$firstName','$lastName','$dateOfBirth','$email','$number','$hashedPassword','$adres','$postcode')";
 
         $db->query($query);
     }
