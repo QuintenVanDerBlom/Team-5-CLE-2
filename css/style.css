@@ -315,7 +315,8 @@ input:valid {
     flex: 1;
 }
 
-.left-part, .right-part {
+.left-part,
+.right-part {
     flex: 1;
     height: 100%;
     border: 1px solid #ffffff;
@@ -341,11 +342,13 @@ input:valid {
     padding: 1vh 5vw;
 }
 
-.left-part h2, .right-part h2 {
+.left-part h2,
+.right-part h2 {
     margin-bottom: 1vh;
 }
 
-.left-part h3, .right-part h3 {
+.left-part h3,
+.right-part h3 {
     margin-bottom: 0.5vh;
 }
 
@@ -486,7 +489,6 @@ input:valid {
     box-shadow: 0px 0vh 5vh #ffffff;
     transition: 0.15s;
 }
-
 
 
 

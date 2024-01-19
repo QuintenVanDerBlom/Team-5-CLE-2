@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/x-icon" href="images/Peitsman-Favicon.png">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <title>Home</title>
 </head>
 <body>
@@ -96,6 +97,8 @@
         <p><a href="Cookiebeleid.html">Cookiebeleid</a> | <a href="Algemene_voorwaarden.html">Algemene voorwaarden</a></p>
     </div>
 </footer>
+
+<script src="bootstrap/js/bootstrap.min.js"></script>
 
 </body>
 </html>
