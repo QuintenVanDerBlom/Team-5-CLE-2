@@ -11,8 +11,19 @@
 
 <body class="contactforum">
     <nav class="navbar">
-    <img class="icon-image" src="includes/images/Peitsman_logo.png"><a href="#products"><span>Producten</span></a><a href="index.php"><span>Home</span></a><a href="preorder.php"><span>Reserveer</span></a><a class="current" href="contact.php"><span>Contact</span></a><a href="login.php"><span>Log in</span></a><img class="profile-icon" src="includes/images/icon.png">
+        <img class="icon-image" src="includes/images/Peitsman_logo.png">
+        <a href="#products"><span>Producten</span></a>
+        <a href="index.php"><span>Home</span></a>
+        <a href="preorder.php"><span>Reserveer</span></a>
+        <a class="current" href="contact.php"><span>Contact</span></a>
+        <a href="login.php"><span>Log in</span></a>
     </nav>
+
+    <div class="profile-container">
+        <a class="profile-icon" href="profiel.php">
+            <img class="profile-icon" src="includes/images/icon.png">
+        </a>
+    </div>
     
     <div class="line"></div>
     <div id="page-container">
