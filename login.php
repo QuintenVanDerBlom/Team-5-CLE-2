@@ -64,17 +64,17 @@ if(isset($_POST['submit'])) {
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Login</title>
 </head>
 <body>
     <nav class="navbar">
         <img class="icon-image" src="includes/images/Peitsman_logo.png">
-        <a href="#products"><span>Producten</span></a>
+        <a href="producten.php"><span>Producten</span></a>
         <a href="index.php"><span>Home</span></a>
-        <a class="current" href="preorder.php"><span>Reserveer</span></a>
+        <a href="preorder.php"><span>Reserveer</span></a>
         <a href="contact.php"><span>Contact</span></a>
-        <a href="login.php"><span>Log in</span></a>
+        <a class="current" href="login.php"><span>Log in</span></a>
     </nav>
 
     <div class="profile-container">
@@ -85,30 +85,46 @@ if(isset($_POST['submit'])) {
     <div class="line"></div>
     
     <section id="formContainer">
-        <h2 class="title">Login</h2>
-        <form  action="" method="post">
+        <h2 class="title">Inloggen</h2>
+        <div class="box">
+
+            <div class="profile-container-2">
+                <a class="profile-icon-2" href="profiel.php">
+                    <img class="profile-icon-2" src="includes/images/icon.png">
+                </a>
+            </div>
+
+            <form  action="" method="post">
                 <div id="errorEmail">
                     <p> <?= $errors['email'] ?? ''?> </p>
                 </div>
-            </section>
 
-            <!-- Password -->
-            <section class="formItem" id="password-Section">
-                <label for="password">Password</label>
-                <input class="form-input" id="password" type="password" name="password"/>
+                <section class="formItem" id="email-Section">
+                    <input class="form-input" id="email" type="email" name="email" placeholder="E-mail" required/>
 
-                <div id="errorPassword">
-                    <p> <?= $errors['password'] ?? ''?> </p>
+                    <div id="errorPassword">
+                        <p> <?= $errors['password'] ?? ''?> </p>
+                    </div>
+                </section>
+
+                <section class="formItem" id="password-Section">
+                    <input class="form-input" id="password" type="password" name="password" placeholder="Wachtwoord" required/>
+
+                    <div id="errorPassword">
+                        <p> <?= $errors['password'] ?? ''?> </p>
+                    </div>
+                </section>
+
+                <section id="submit">
+                    <button class="login_button" id="submitButton" type="submit" name="submit">Login</button>
+                </section>
+
+                <div class="registerLink">
+                    <a href="register.php">Ik heb nog geen account</a>
                 </div>
-            </section>
-            <a class="registerLink" href="register.php">Ik heb nog geen account</a>
-
-            <!-- Submit -->
-            <section id="submit">
-                <button id="submitButton" type="submit" name="submit">Login</button>
-            </section>
-
-        </form>
+ 
+            </form>
+        </div>
     </section>
 </body>
 </html>

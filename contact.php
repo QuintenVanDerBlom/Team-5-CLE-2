@@ -12,7 +12,7 @@
 <body class="contactforum">
     <nav class="navbar">
         <img class="icon-image" src="includes/images/Peitsman_logo.png">
-        <a href="#products"><span>Producten</span></a>
+        <a href="producten.php"><span>Producten</span></a>
         <a href="index.php"><span>Home</span></a>
         <a href="preorder.php"><span>Reserveer</span></a>
         <a class="current" href="contact.php"><span>Contact</span></a>
