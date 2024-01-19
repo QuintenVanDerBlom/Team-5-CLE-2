@@ -3,7 +3,8 @@
 #page-container {
     /*dit is voor de footer*/
     position: relative;
-    min-height: 86.45vh;
+    max-height: 100vh;
+    min-height: 90vh;
 }
 
 #content-wrap {
@@ -15,18 +16,27 @@
     box-sizing: border-box;
 }
 
-/* navigatiebar */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+
+/* navigatiebalk */
 
 .navbar {
-    display: flex;
-    flex-direction: row;
     overflow: hidden;
     background-color: #ffffff;
     font-family: "IBM Plex mono";
     text-align: center;
     position: relative;
+    min-width: 1065px;
+    z-index: 1;
 }
-
 
 .icon-image {
     max-width: 15rem;
@@ -34,15 +44,14 @@
     align-self: center;
     position: absolute;
     margin: 8.81667px;
-    /*vraag er maar niet eens naar*/
     left: 0;
 }
 
 .profile-icon {
+    margin: 0.5rem;
     width: 3rem;
     position: absolute;
     right: 0;
-    margin: 0.5rem;
 }
 
 .navbar a {
@@ -67,8 +76,7 @@
 }
 
 .current {
-    background-color: #b93d1e;
-    color: #ffffff;
+    background-color: #b14429;
 }
 
 .line {
@@ -76,9 +84,9 @@
     height: 2px;
 }
 
-body {
-    margin: 0;
-}
+
+
+/*algemene dingen*/
 
 h1 {
     margin: 50px;
@@ -125,6 +133,10 @@ header p {
     color: white;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+
+
+/* Homepagina */
 
 #cards {
     display: flex;
@@ -198,6 +210,8 @@ header p {
     transform: scale(1.2);
 }
 
+
+
 /* contactformulier */
 
 .contactforum {
@@ -211,7 +225,6 @@ header p {
     font-family: "IBM Plex mono";
     width: 60vw;
     max-width: 650px;
-    /*Mag je wijzigen als je vindt dat t niet klopt*/
     margin: 0 auto;
     padding: 2vh;
 }
@@ -238,6 +251,10 @@ header p {
     box-sizing: border-box;
     border: 2px solid #3a3a3a;
     border-radius: 1vh;
+}
+
+.invullen input::placeholder {
+    text-align: center;
 }
 
 .invullen.row {
@@ -288,6 +305,220 @@ input:valid {
     transition: 0.15s;
 }
 
+
+
+/* Reserveerpagina */
+/* Er staan dingen dubbel in maar ik heb daar nu geen zin meer in ik fix dat morgen wel */
+
+.body-content {
+    display: flex;
+    flex: 1;
+}
+
+.left-part, .right-part {
+    flex: 1;
+    height: 100%;
+    border: 1px solid #ffffff;
+    box-sizing: border-box;
+    z-index: 0;
+}
+
+.left-part {
+    background-color: #ffffff;
+    padding: 1vh 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.left-part h2,
+.left-part h3 {
+    padding-left: 20px;
+}
+
+.right-part {
+    background-color: #ffffff;
+    padding: 1vh 5vw;
+}
+
+.left-part h2, .right-part h2 {
+    margin-bottom: 1vh;
+}
+
+.left-part h3, .right-part h3 {
+    margin-bottom: 0.5vh;
+}
+
+.winkelwagen-container {
+    margin-bottom: 5vh;
+    color: #000000;
+    font-size: clamp(10px, 3vh, 25px);
+    background-color: #ffffff;
+    border: 2px solid #000;
+    border-radius: 1vh;
+    width: 100%;
+    height: 20vh;
+    transition: 0.15s;
+}
+
+.plekbezorging,
+.tijd {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.bestelknop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.invullen.column input {
+    margin-top: 0.5vh;
+    color: #000000;
+    font-size: clamp(10px, 3vh, 25px);
+    background-color: #ffffff;
+    border: 2px solid #000;
+    border-radius: 1vh;
+    width: 100%;
+    height: 10vh;
+    max-height: 50px;
+    transition: 0.15s;
+}
+
+.invullen.column input::placeholder {
+    text-align: center;
+}
+
+.invullen.column input[type="time"] {
+    width: 100%;
+    text-align: center;
+}
+
+.invullen.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.invullen.row .column {
+    width: 46%;
+    margin-bottom: 10px;
+}
+
+.order_button {
+    align-items: center;
+    margin-top: 2vh;
+    color: #fff;
+    font-size: clamp(10px, 3vh, 25px);
+    background-color: #CD4321;
+    border: 2px solid #000;
+    border-radius: 1vh;
+    width: 90%;
+    height: 10vh;
+    max-height: 50px;
+    transition: 0.15s;
+}
+
+.order_button:hover {
+    transform: scale(1.05);
+    font-size: clamp(15px, 4vh, 30px);
+    background-color: #df5f3f;
+    box-shadow: 0px 0vh 5vh #ffffff;
+    transition: 0.15s;
+}
+
+.meer-reserveren {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.more-products-link {
+    margin-top: 10px;
+    color: #fff;
+    text-decoration: none;
+    font-size: clamp(10px, 3vh, 25px);
+    background-color: #CD4321;
+    border: 2px solid #000;
+    border-radius: 1vh;
+    width: 100%;
+    max-height: 50px;
+    transition: 0.15s;
+}
+
+.bekijk-producten-button:hover {
+    transform: scale(1.05);
+    font-size: clamp(15px, 4vh, 30px);
+    background-color: #df5f3f;
+    box-shadow: 0px 0vh 5vh #ffffff;
+    transition: 0.15s;
+}
+
+.kalender-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.arrow-button {
+    margin: 10px;
+    color: #000000;
+    font-size: clamp(10px, 3vh, 25px);
+    background-color: transparent;
+    border: none;
+    border-radius: 1vh;
+    width: 10vw;
+    max-width: 80px;
+    height: 10vh;
+    max-height: 50px;
+    transition: 0.15s;
+}
+
+.arrow-button:hover {
+    background-color: rgba(255, 220, 212, 0.5);
+    box-shadow: 0px 0vh 5vh #ffffff;
+    transition: 0.15s;
+}
+
+
+
+
+
+/* login */
+/* nogmaals veel hergebruikte elementen */
+
+.login_button {
+    margin-top: 2vh;
+    color: #fff;
+    font-size: clamp(10px, 3vh, 25px);
+    background-color: #9ECE62;
+    border: 2px solid #000;
+    border-radius: 1vh;
+    width: 100%;
+    height: 10vh;
+    max-height: 50px;
+    transition: 0.15s;
+}
+
+.login_button:hover {
+    transform: scale(1.05);
+    font-size: clamp(15px, 4vh, 30px);
+    background-color: #abd37a;
+    box-shadow: 0px 0vh 5vh #ffffff;
+    transition: 0.15s;
+}
+
+
+
+
+
 /* footer */
 
 footer {
@@ -299,6 +530,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 1;
 }
 
 footer p {
