@@ -1,4 +1,7 @@
 <?php
+
+    $loggedin = true;
+
     if (session_status() !== PHP_SESSION_ACTIVE) {
         session_start();
         $_SESSION['loggedin'] = false;
@@ -30,9 +33,9 @@
     <?php } else { ?>
         <nav class="navbar">
             <img class="icon-image" src="includes/images/Peitsman_logo.png">
-            <a href="#products"><span>Producten</span></a>
+            <a href="producten.php"><span>Producten</span></a>
             <a class="current" href="index.php"><span>Home</span></a>
-            <a href="#preorder"><span>Reserveer</span></a>
+            <a href="preorder.php"><span>Reserveer</span></a>
             <a href="contact.php"><span>Contact</span></a>
             <a href="login.php"><span>Log in</span></a>
             <img class="profile-icon" src="includes/images/icon.png">
