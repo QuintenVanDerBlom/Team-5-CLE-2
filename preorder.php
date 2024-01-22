@@ -1,59 +1,3 @@
-<?php
-// if ($_SESSION["loggedin"] == false){
-//     header(location:login.php);
-// }
-if(isset($_POST['submit'])) {
-    /** @var mysqli $db */
-    require_once "includes/database.php";
-
-    // Get form data
-    $errors = array();
-    $errorMessage = 'oeps er is iets fout gegaan.';
-
-    $firstName = $_POST['firstName'];
-    $lastName = $_POST['lastName'];
-    $dateOfBirth = $_POST['DoB'];
-    $email = $_POST['email'];
-    $number = $_POST['number'];
-    $password = $_POST['password'];
-    $adres = $_POST['adres'];
-    $postcode = $_POST['postcode'];
-
-
-    // Server-side validation
-    if($firstName === '') {
-        $errors['firstName'] = $errorMessage;
-    }if($lastName === '') {
-        $errors['lastName'] = $errorMessage;
-    }if($dateOfBirth === '') {
-        $errors['DoB'] = $errorMessage;
-    }if($email === '') {
-        $errors['email'] = $errorMessage;
-    }if($number === '') {
-        $errors['number'] = $errorMessage;
-    }if($password === '') {
-        $errors['password'] = $errorMessage;
-    }if($adres === '') {
-        $errors['adres'] = $errorMessage;
-    }if($postcode === '') {
-        $errors['postcode'] = $errorMessage;
-    }
-
-    // create a secure password, with the PHP function password_hash()
-    if (empty($errors)) {
-        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-
-        // store the new user in the database.
-        $query = "INSERT INTO `users`(`id`, `first_name`, `last_name`,`date_of_birth`, `mail_adres`, `phone_number`, `password`, `adres`,`postcode`) 
-                  VALUES ('','$firstName','$lastName','$dateOfBirth','$email','$number','$hashedPassword','$adres','$postcode')";
-
-        $db->query($query);
-    }
-}
-?>
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -102,7 +46,7 @@ if(isset($_POST['submit'])) {
                     </div>
                 </div>
             </div>
-            <h3>Tijd</h3>
+            <h3>Datum en Tijd</h3>
             <div class="tijd">
                 <div class="invullen row">
                     <div class="invullen column">
@@ -119,19 +63,14 @@ if(isset($_POST['submit'])) {
         </div>
 
         <div class="right-part">
-            <div class="meer-reserveren">
-                <h2>Meer reserveren?</h2>
-                <p><a class="more-products-link" href="products.php">Bekijk producten</a></p>
-            </div>
-            
-            
-            <h2>Kalender</h2>
-            <div class="kalender">
-                <h3>hier komt de kalender ben er nog mee bezig</h3>
-            </div>
-            <div class="kalender-buttons">
-                <button class="arrow-button" id="left-arrow">&#8592;</button>
-                <button class="arrow-button" id="right-arrow">&#8594;</button>
+            <div class="Meer">
+                <div class="invullen column">
+                        <h2>Meer bestellen?</h2>
+                    </div>
+                    <div class="invullen column">
+                        <a class="more-products-link">Bekijk</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
