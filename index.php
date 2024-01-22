@@ -1,14 +1,12 @@
 <?php
-
-    $loggedin = true;
-
-    if (session_status() !== PHP_SESSION_ACTIVE) {
+    if(session_status() === PHP_SESSION_NONE) {
         session_start();
-        $_SESSION['loggedin'] = false;
     } else {
         $loggedin = $_SESSION['loggedin'];
+        var_dump($_SESSION);
     }
 
+    $loggedin = true;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -28,7 +26,6 @@
         <a class="current" href="index.php"><span>Home</span></a>
         <a href="preorder.php"><span>Reserveer</span></a>
         <a href="contact.php"><span>Contact</span></a>
-        <a href="login.php"><span>Log in</span></a>
     </nav>
     <?php } else { ?>
         <nav class="navbar">

@@ -6,7 +6,7 @@ if(isset($_POST['submit'])) {
 
     // Get form data
     $errors = array();
-    $errorMessage = 'oeps er is iets fout gegaan.';
+    $errorMessage = 'Oeps er is iets fout gegaan.';
     $email = mysqli_real_escape_string($db, $_POST['email']);
     $password = mysqli_real_escape_string($db, $_POST['password']);
 
