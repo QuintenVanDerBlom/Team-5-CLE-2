@@ -126,5 +126,13 @@ if(isset($_POST['submit'])) {
             </form>
         </div>
     </section>
+    <footer>
+        <div class="belangrijk">
+            <p>&copy; 2024 Peitsman.com | alle rechten voorbehouden</p>
+        </div>
+        <div class="meuk">
+            <p><a href="Cookiebeleid.html">Cookiebeleid</a> | <a href="Algemene_voorwaarden.html">Algemene voorwaarden</a></p>
+        </div>
+    </footer>
 </body>
 </html>

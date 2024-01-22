@@ -66,7 +66,7 @@ if(isset($_POST['submit'])) {
 
     <nav class="navbar">
         <img class="icon-image" src="includes/images/Peitsman_logo.png">
-        <a href="#products"><span>Producten</span></a>
+        <a href="producten.php"><span>Producten</span></a>
         <a href="index.php"><span>Home</span></a>
         <a href="preorder.php"><span>Reserveer</span></a>
         <a href="contact.php"><span>Contact</span></a>
@@ -82,6 +82,83 @@ if(isset($_POST['submit'])) {
      <div class="line"></div>
 
     <section class="profileFlex">
+
+        
+
+        <div class="body-content">
+            <div class="left-part-2">
+                <h3>Mijn profiel</h3>
+                <div class="profiel">
+
+                    <div class="invullen row">
+
+                        <!-- hier staat nu voornaam -->
+                        <div class="invullen column">
+                            <section class="formItem" id="firstName-Section">
+                                <input class="form-input-2" type="text" id="firstName" name="firstName" placeholder="Voornaam" value=" <?= $firstName ?? ''?>" required>
+                                <div>
+                                    <p> <?= $errors['firstName'] ?? ''?> </p>
+                                </div>
+                            </section>
+                        </div>
+
+                        <!-- hier staat nu achternaam -->
+                        <div class="invullen column">
+                            <section class="formItem" id="lastName-Section">
+                                <input class="form-input-2" type="text" id="lastName" name="lastName" placeholder="Achternaam" value=" <?= $lastName ?? ''?>" required>
+                                <div id="errorLastName">
+                                    <p> <?= $errors['lastName'] ?? ''?> </p>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+
+                    <!-- hier staat nu E-mail -->
+                    <div class="invullen column">
+                        <section class="formItem" id="email-Section">
+                            <input class="form-input-2" type="text" id="email" name="email" placeholder="E-mail" value="<?= $email ?? ''?>" required>
+                            <div id="errorEmail">
+                                <p> <?= $errors['email'] ?? ''?> </p>
+                            </div>
+                        </section>
+                    </div>
+
+                    <!-- hier staat nu adres -->
+                    <div class="invullen column">
+                        <section class="formItem" id="adres-Section">
+                            <input class="form-input-2" type="text" id="adres" name="adres" placeholder="Adres" value="<?= $adres ?? ''?>" required>
+                            <div id="errorAdres">
+                                <p> <?= $errors['adres'] ?? ''?> </p>
+                            </div>
+                        </section>
+                    </div>
+
+                        <!-- hier staat nu postcode -->
+                    <div class="invullen column">
+                        <section class="formItem" id="postcode-Section">
+                            <input class="form-input-2" type="text" id="postcode" name="postcode" placeholder="Postcode" value="<?= $postcode ?? ''?>" required>
+                            <div id="errorPostcode">
+                                <p> <?= $errors['postcode'] ?? ''?> </p>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+
+                <!-- Er komt nog een uitlog knop, ik had er geen zin meer in -->
+                <div class="bevestigknop">
+                    <button class="confirm_button" type="submit">Wijzigingen opslaan</button>
+                </div>
+            </div>
+
+            <div class="right-part-2">
+                <a class="profile-icon-3" href="profiel.php">
+                    <img class="profile-icon-3" src="includes/images/icon.png">
+                </a>
+                <h2>Welkom</h2>
+            </div>
+        </div>
+
+
 
         <section id="formContainer">
             <h2 class="title">Mijn profiel</h2>

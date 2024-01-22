@@ -50,10 +50,7 @@
             <div class="tijd">
                 <div class="invullen row">
                     <div class="invullen column">
-                        <input type="time" id="start-tijd" name="start-tijd" required>
-                    </div>
-                    <div class="invullen column_midden">
-                        <p>tot</p>
+                        <input type="date" id="start-tijd" name="start-tijd" required>
                     </div>
                     <div class="invullen column">
                         <input type="time" id="eind-tijd" name="eind-tijd" required>
