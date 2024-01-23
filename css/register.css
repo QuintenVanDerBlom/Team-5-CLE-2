@@ -1,35 +1,35 @@
 /*register form*/
 
-#formContainer{
+#formContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.halfFormContainer{
+.halfFormContainer {
     display: flex;
     flex-direction: row;
     gap: 10px;
 }
 
-.form-input{
+.form-input {
     width: 400px;
     height: 30px;
-    background-color: #CECCDD;
+    background-color: white;
 }
 
-.form-half-input{
+.form-half-input {
     width: 195px;
     height: 30px;
-    background-color: #CECCDD;
+    background-color: white;
 }
 
-.formItem{
+.formItem {
     display: flex;
     flex-direction: column;
 }
 
-#submitButton{
+#submitButton {
     background-color: #DE3400;
     color: white;
     height: 50px;
@@ -38,7 +38,7 @@
 
 /* login page */
 
-.registerLink{
+.registerLink {
     text-decoration: none;
     color: deepskyblue;
 }
