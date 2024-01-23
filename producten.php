@@ -31,41 +31,66 @@
             <h2>Licht</h2>
             <div class="product-container">
                 <div class="product">
-                    <h3>Glarity Oplaadbare discolamp</h3>
-                    <span class="price">€40,00</span>
-                    <button class="order-btn">Bestel</button></a>
-                    <img src="includes/images/discolamp.png" alt="Product 1 Image">
+                    <div class="product-side">
+                        <h3>Glarity Oplaadbare discolamp</h3>
+                        <span class="price">€40,00</span>
+                    </div>
+                    <div class="product-side">
+                        <img class="product-img" src="includes/images/discolamp.png" alt="Product 1 Image">
+                        <button class="order-btn">Bestel</button>
+                    </div>
                 </div>
                 <div class="product">
-                    <h3>Placeholder</h3>
-                    <span class="price">€40,00</span>
-                    <button class="order-btn">Bestel</button>
-                    <img src="product1.jpg" alt="Product 1 Image">
+                    <div class="product-side">
+                        <h3>Glarity Oplaadbare discolamp</h3>
+                        <span class="price">€40,00</span>
+                    </div>
+                    <div class="product-side">
+                        <img class="product-img" src="includes/images/discolamp.png" alt="Product 1 Image">
+                        <button class="order-btn">Bestel</button>
+                    </div>
                 </div>
                 <div class="product">
-                    <h3>Placeholder</h3>
-                    <span class="price">€40,00</span>
-                    <button class="order-btn">Bestel</button>
-                    <img src="product1.jpg" alt="Product 1 Image">
+                    <div class="product-side">
+                        <h3>Glarity Oplaadbare discolamp</h3>
+                        <span class="price">€40,00</span>
+                    </div>
+                    <div class="product-side">
+                        <img class="product-img" src="includes/images/discolamp.png" alt="Product 1 Image">
+                        <button class="order-btn">Bestel</button>
+                    </div>
                 </div>
                 <div class="product">
-                    <h3>Placeholder</h3>
-                    <span class="price">€40,00</span>
-                    <button class="order-btn">Bestel</button>
-                    <img src="product1.jpg" alt="Product 1 Image">
+                    <div class="product-side">
+                        <h3>Glarity Oplaadbare discolamp</h3>
+                        <span class="price">€40,00</span>
+                    </div>
+                    <div class="product-side">
+                        <img class="product-img" src="includes/images/discolamp.png" alt="Product 1 Image">
+                        <button class="order-btn">Bestel</button>
+                    </div>
                 </div>
                 <div class="product">
-                    <h3>Placeholder</h3>
-                    <span class="price">€40,00</span>
-                    <button class="order-btn">Bestel</button>
-                    <img src="product1.jpg" alt="Product 1 Image">
+                    <div class="product-side">
+                        <h3>Glarity Oplaadbare discolamp</h3>
+                        <span class="price">€40,00</span>
+                    </div>
+                    <div class="product-side">
+                        <img class="product-img" src="includes/images/discolamp.png" alt="Product 1 Image">
+                        <button class="order-btn">Bestel</button>
+                    </div>
                 </div>
                 <div class="product">
-                    <h3>Placeholder</h3>
-                    <span class="price">€40,00</span>
-                    <button class="order-btn">Bestel</button>
-                    <img src="product1.jpg" alt="Product 1 Image">
+                    <div class="product-side">
+                        <h3>Glarity Oplaadbare discolamp</h3>
+                        <span class="price">€40,00</span>
+                    </div>
+                    <div class="product-side">
+                        <img class="product-img" src="includes/images/discolamp.png" alt="Product 1 Image">
+                        <button class="order-btn">Bestel</button>
+                    </div>
                 </div>
+
             </div>
         </section>
 
@@ -73,40 +98,64 @@
             <h2>Beeld</h2>
                 <div class="product-container">
                     <div class="product">
-                        <h3>Auronic beamer</h3>
-                        <span class="price">€100,00</span>
-                        <button class="order-btn">Bestel</button>
-                        <img src="includes/images/Auronic-beamer.png" alt="Product 1 Image">
+                        <div class="product-side">
+                            <h3>Auronic beamer</h3>
+                            <span class="price">€100,00</span>
+                        </div>
+                        <div class="product-side">
+                            <img src="includes/images/Auronic-beamer.png" alt="Product 1 Image">
+                            <button class="order-btn">Bestel</button>
+                        </div>
                     </div>
                     <div class="product">
-                        <h3>Placeholder</h3>
-                        <span class="price">€100,00</span>
-                        <button class="order-btn">Bestel</button>
-                        <img src="product1.jpg" alt="Product 1 Image">
+                        <div class="product-side">
+                            <h3>Auronic beamer</h3>
+                            <span class="price">€100,00</span>
+                        </div>
+                        <div class="product-side">
+                            <img src="includes/images/Auronic-beamer.png" alt="Product 1 Image">
+                            <button class="order-btn">Bestel</button>
+                        </div>
                     </div>
                     <div class="product">
-                        <h3>Placeholder</h3>
-                        <span class="price">€100,00</span>
-                        <button class="order-btn">Bestel</button>
-                        <img src="product1.jpg" alt="Product 1 Image">
+                        <div class="product-side">
+                            <h3>Auronic beamer</h3>
+                            <span class="price">€100,00</span>
+                        </div>
+                        <div class="product-side">
+                            <img src="includes/images/Auronic-beamer.png" alt="Product 1 Image">
+                            <button class="order-btn">Bestel</button>
+                        </div>
                     </div>
                     <div class="product">
-                        <h3>Placeholder</h3>
-                        <span class="price">€100,00</span>
-                        <button class="order-btn">Bestel</button>
-                        <img src="product1.jpg" alt="Product 1 Image">
+                        <div class="product-side">
+                            <h3>Auronic beamer</h3>
+                            <span class="price">€100,00</span>
+                        </div>
+                        <div class="product-side">
+                            <img src="includes/images/Auronic-beamer.png" alt="Product 1 Image">
+                            <button class="order-btn">Bestel</button>
+                        </div>
                     </div>
                     <div class="product">
-                        <h3>Placeholder</h3>
-                        <span class="price">€100,00</span>
-                        <button class="order-btn">Bestel</button>
-                        <img src="product1.jpg" alt="Product 1 Image">
+                        <div class="product-side">
+                            <h3>Auronic beamer</h3>
+                            <span class="price">€100,00</span>
+                        </div>
+                        <div class="product-side">
+                            <img src="includes/images/Auronic-beamer.png" alt="Product 1 Image">
+                            <button class="order-btn">Bestel</button>
+                        </div>
                     </div>
                     <div class="product">
-                        <h3>Placeholder</h3>
-                        <span class="price">€100,00</span>
-                        <button class="order-btn">Bestel</button>
-                        <img src="product1.jpg" alt="Product 1 Image">
+                        <div class="product-side">
+                            <h3>Auronic beamer</h3>
+                            <span class="price">€100,00</span>
+                        </div>
+                        <div class="product-side">
+                            <img src="includes/images/Auronic-beamer.png" alt="Product 1 Image">
+                            <button class="order-btn">Bestel</button>
+                        </div>
                     </div>
                 </div>
         </section>
@@ -115,46 +164,66 @@
             <h2>Geluid</h2>
                 <div class="product-container">
                     <div class="product">
-                        <div class="left-part">
-                            <h3>Smart subwoofer</h3>
+                        <div class="product-side">
+                            <h3>Subwoofer</h3>
                             <span class="price">€350,00</span>
+                        </div>
+                        <div class="product-side">
+                            <img src="includes/images/Smart-subwoofer.png" alt="Product 1 Image">
                             <button class="order-btn">Bestel</button>
                         </div>
-                        <div class="right-part">
-                            <img class="prod-img" src="includes/images/Smart-subwoofer.png" alt="Product 1 Image">
+                    </div>
+                    <div class="product">
+                        <div class="product-side">
+                            <h3>Subwoofer</h3>
+                            <span class="price">€350,00</span>
+                        </div>
+                        <div class="product-side">
+                            <img src="includes/images/Smart-subwoofer.png" alt="Product 1 Image">
+                            <button class="order-btn">Bestel</button>
                         </div>
                     </div>
                     <div class="product">
-                        <h3>Placeholder</h3>
-                        <span class="price">€350,00</span>
-                        <button class="order-btn">Bestel</button>
-                        <img src="product1.jpg" alt="Product 1 Image">
+                        <div class="product-side">
+                            <h3>Subwoofer</h3>
+                            <span class="price">€350,00</span>
+                        </div>
+                        <div class="product-side">
+                            <img src="includes/images/Smart-subwoofer.png" alt="Product 1 Image">
+                            <button class="order-btn">Bestel</button>
+                        </div>
                     </div>
                     <div class="product">
-                        <h3>Placeholder</h3>
-                        <span class="price">€350,00</span>
-                        <button class="order-btn">Bestel</button>
-                        <img src="product1.jpg" alt="Product 1 Image">
+                        <div class="product-side">
+                            <h3>Subwoofer</h3>
+                            <span class="price">€350,00</span>
+                        </div>
+                        <div class="product-side">
+                            <img src="includes/images/Smart-subwoofer.png" alt="Product 1 Image">
+                            <button class="order-btn">Bestel</button>
+                        </div>
                     </div>
                     <div class="product">
-                        <h3>Placeholder</h3>
-                        <span class="price">€350,00</span>
-                        <button class="order-btn">Bestel</button>
-                        <img src="product1.jpg" alt="Product 1 Image">
+                        <div class="product-side">
+                            <h3>Subwoofer</h3>
+                            <span class="price">€350,00</span>
+                        </div>
+                        <div class="product-side">
+                            <img src="includes/images/Smart-subwoofer.png" alt="Product 1 Image">
+                            <button class="order-btn">Bestel</button>
+                        </div>
                     </div>
                     <div class="product">
-                        <h3>Placeholder</h3>
-                        <span class="price">€350,00</span>
-                        <button class="order-btn">Bestel</button>
-                        <img src="product1.jpg" alt="Product 1 Image">
+                        <div class="product-side">
+                            <h3>Subwoofer</h3>
+                            <span class="price">€350,00</span>
+                        </div>
+                        <div class="product-side">
+                            <img src="includes/images/Smart-subwoofer.png" alt="Product 1 Image">
+                            <button class="order-btn">Bestel</button>
+                        </div>
                     </div>
-                    <div class="product">
-                        <h3>Placeholder</h3>
-                        <span class="price">€350,00</span>
-                        <button class="order-btn">Bestel</button>
-                        <img src="product1.jpg" alt="Product 1 Image">
-                    </div>
-                </div>
+
         </section>
     </div>
 </body>
