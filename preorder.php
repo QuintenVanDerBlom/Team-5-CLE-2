@@ -74,7 +74,7 @@ if(isset($_POST['submit'])) {
     </div>
     <div class="line"></div>
 
-    <div class="body-content">
+    <div class="body_content">
         <div class="left-part">
             <h2>Reserveer</h2>
             <div class="producten-lijst">
