@@ -839,3 +839,12 @@ footer p {
     }
 }
 
+.product-img{
+    width: 7.5vw;
+}
+
+.product-side{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
