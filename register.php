@@ -58,11 +58,7 @@ if(isset($_POST['submit'])) {
     <link rel="stylesheet" href="css/register.css" >
     <title>Registreren</title>
 </head>
-<body>
-
-    <section>
-        <h1>Welkom <?= $firstName ?></h1>
-    <section>
+<body>  
 
     <section id="formContainer">
         <h2 class="title">Register</h2>

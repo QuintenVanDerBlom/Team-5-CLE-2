@@ -33,7 +33,7 @@
                 <div class="product">
                     <h3>Glarity Oplaadbare discolamp</h3>
                     <span class="price">€40,00</span>
-                    <button class="order-btn">Bestel</button>
+                    <button class="order-btn">Bestel</button></a>
                     <img src="includes/images/discolamp.png" alt="Product 1 Image">
                 </div>
                 <div class="product">
