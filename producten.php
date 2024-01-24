@@ -103,7 +103,7 @@
                             <span class="price">€100,00</span>
                         </div>
                         <div class="product-side">
-                            <img src="includes/images/Auronic-beamer.png" alt="Product 1 Image">
+                            <img class="product-img" src="includes/images/Auronic-beamer.png" alt="Product 1 Image">
                             <button class="order-btn">Bestel</button>
                         </div>
                     </div>
@@ -113,7 +113,7 @@
                             <span class="price">€100,00</span>
                         </div>
                         <div class="product-side">
-                            <img src="includes/images/Auronic-beamer.png" alt="Product 1 Image">
+                            <img class="product-img" src="includes/images/Auronic-beamer.png" alt="Product 1 Image">
                             <button class="order-btn">Bestel</button>
                         </div>
                     </div>
@@ -123,7 +123,7 @@
                             <span class="price">€100,00</span>
                         </div>
                         <div class="product-side">
-                            <img src="includes/images/Auronic-beamer.png" alt="Product 1 Image">
+                            <img class="product-img" src="includes/images/Auronic-beamer.png" alt="Product 1 Image">
                             <button class="order-btn">Bestel</button>
                         </div>
                     </div>
@@ -133,7 +133,7 @@
                             <span class="price">€100,00</span>
                         </div>
                         <div class="product-side">
-                            <img src="includes/images/Auronic-beamer.png" alt="Product 1 Image">
+                            <img class="product-img" src="includes/images/Auronic-beamer.png" alt="Product 1 Image">
                             <button class="order-btn">Bestel</button>
                         </div>
                     </div>
@@ -143,7 +143,7 @@
                             <span class="price">€100,00</span>
                         </div>
                         <div class="product-side">
-                            <img src="includes/images/Auronic-beamer.png" alt="Product 1 Image">
+                            <img class="product-img" src="includes/images/Auronic-beamer.png" alt="Product 1 Image">
                             <button class="order-btn">Bestel</button>
                         </div>
                     </div>
@@ -153,7 +153,7 @@
                             <span class="price">€100,00</span>
                         </div>
                         <div class="product-side">
-                            <img src="includes/images/Auronic-beamer.png" alt="Product 1 Image">
+                            <img class="product-img" src="includes/images/Auronic-beamer.png" alt="Product 1 Image">
                             <button class="order-btn">Bestel</button>
                         </div>
                     </div>
@@ -169,7 +169,7 @@
                             <span class="price">€350,00</span>
                         </div>
                         <div class="product-side">
-                            <img src="includes/images/Smart-subwoofer.png" alt="Product 1 Image">
+                            <img class="product-img" src="includes/images/Smart-subwoofer.png" alt="Product 1 Image">
                             <button class="order-btn">Bestel</button>
                         </div>
                     </div>
@@ -179,7 +179,7 @@
                             <span class="price">€350,00</span>
                         </div>
                         <div class="product-side">
-                            <img src="includes/images/Smart-subwoofer.png" alt="Product 1 Image">
+                            <img class="product-img" src="includes/images/Smart-subwoofer.png" alt="Product 1 Image">
                             <button class="order-btn">Bestel</button>
                         </div>
                     </div>
@@ -189,7 +189,7 @@
                             <span class="price">€350,00</span>
                         </div>
                         <div class="product-side">
-                            <img src="includes/images/Smart-subwoofer.png" alt="Product 1 Image">
+                            <img class="product-img" src="includes/images/Smart-subwoofer.png" alt="Product 1 Image">
                             <button class="order-btn">Bestel</button>
                         </div>
                     </div>
@@ -199,7 +199,7 @@
                             <span class="price">€350,00</span>
                         </div>
                         <div class="product-side">
-                            <img src="includes/images/Smart-subwoofer.png" alt="Product 1 Image">
+                            <img class="product-img" src="includes/images/Smart-subwoofer.png" alt="Product 1 Image">
                             <button class="order-btn">Bestel</button>
                         </div>
                     </div>
@@ -209,7 +209,7 @@
                             <span class="price">€350,00</span>
                         </div>
                         <div class="product-side">
-                            <img src="includes/images/Smart-subwoofer.png" alt="Product 1 Image">
+                            <img class="product-img" src="includes/images/Smart-subwoofer.png" alt="Product 1 Image">
                             <button class="order-btn">Bestel</button>
                         </div>
                     </div>
@@ -219,7 +219,7 @@
                             <span class="price">€350,00</span>
                         </div>
                         <div class="product-side">
-                            <img src="includes/images/Smart-subwoofer.png" alt="Product 1 Image">
+                            <img class="product-img" src="includes/images/Smart-subwoofer.png" alt="Product 1 Image">
                             <button class="order-btn">Bestel</button>
                         </div>
                     </div>
