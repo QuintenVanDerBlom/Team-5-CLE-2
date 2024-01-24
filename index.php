@@ -1,12 +1,12 @@
 <?php
+    $loggedin = false;
+
     if(session_status() === PHP_SESSION_NONE) {
         session_start();
     } else {
         $loggedin = $_SESSION['loggedin'];
         var_dump($_SESSION);
     }
-
-    $loggedin = true;
 ?>
 <!DOCTYPE html>
 <html lang="en">
